@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apReservas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #141414;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.vista.ReservasController">
+   <children>
+      <ImageView fitHeight="320.0" fitWidth="455.0" layoutX="-86.0" layoutY="-67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../recursos/X.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="vbModificar" layoutX="27.0" layoutY="175.0" prefHeight="279.0" prefWidth="314.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;" styleClass="reservas" stylesheets="@../application.css">
+         <children>
+            <Pane fx:id="pnModificar" prefHeight="245.0" prefWidth="310.0">
+               <children>
+                  <Label layoutX="41.0" layoutY="91.0" text="seleccione el número de " textFill="#f59f00">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#87f500" height="17.0" layoutX="220.0" layoutY="194.0" stroke="BLACK" strokeType="INSIDE" width="31.0" />
+                  <Polygon fill="#87f500" layoutX="250.0" layoutY="218.0" points="0.0, 4.0, 31.0, -16.0, 0.0, -34.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="23.0" layoutY="65.0" text="Para reservar una habitación," textFill="#f59f00">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="119.0" text="habitación del recuadro " textFill="#f59f00">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="92.0" layoutY="150.0" text="de la derecha" textFill="#f59f00">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </VBox>
+      <GridPane fx:id="gridHabitaciones" layoutX="357.0" layoutY="175.0" prefHeight="279.0" prefWidth="314.0" style="-fx-background-color: #C7d5dc; -fx-border-color: black; -fx-border-width: 2;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="80.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="38.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="77.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="39.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="79.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ToggleButton fx:id="btn1" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="1" />
+            <ToggleButton fx:id="btn2" layoutX="17.0" layoutY="18.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="2" GridPane.rowIndex="1" />
+            <ToggleButton fx:id="btn3" layoutX="17.0" layoutY="67.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="3" GridPane.rowIndex="2" />
+            <ToggleButton fx:id="btn4" layoutX="17.0" layoutY="115.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="4" GridPane.rowIndex="3" />
+            <ToggleButton fx:id="btn5" layoutX="17.0" layoutY="163.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="5" GridPane.rowIndex="4" />
+            <ToggleButton fx:id="btn6" layoutX="17.0" layoutY="211.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="6" GridPane.rowIndex="5" />
+            <ToggleButton fx:id="btn7" layoutX="17.0" layoutY="18.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="7" GridPane.columnIndex="2" />
+            <ToggleButton fx:id="btn8" layoutX="129.0" layoutY="18.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="8" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ToggleButton fx:id="btn9" layoutX="129.0" layoutY="67.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ToggleButton fx:id="btn10" layoutX="129.0" layoutY="115.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="10" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ToggleButton fx:id="btn11" layoutX="129.0" layoutY="163.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="11" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <ToggleButton fx:id="btn12" layoutX="129.0" layoutY="211.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="12" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <ToggleButton fx:id="btn13" layoutX="129.0" layoutY="18.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="13" GridPane.columnIndex="4" />
+            <ToggleButton fx:id="btn14" layoutX="129.0" layoutY="18.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="14" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ToggleButton fx:id="btn15" layoutX="240.0" layoutY="67.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="15" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ToggleButton fx:id="btn16" layoutX="240.0" layoutY="115.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="16" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ToggleButton fx:id="btn17" layoutX="240.0" layoutY="163.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="17" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <ToggleButton fx:id="btn18" layoutX="240.0" layoutY="211.0" mnemonicParsing="false" onAction="#activaBotonesReservas" prefHeight="47.0" prefWidth="77.0" styleClass="habitacion" stylesheets="@../application.css" text="18" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+      <Label layoutX="357.0" layoutY="470.0" text="Habitación Libre" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0dab1a" height="28.0" layoutX="467.0" layoutY="465.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+      <Label layoutX="506.0" layoutY="470.0" text="Habitación Reservada" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ee2901" height="28.0" layoutX="645.0" layoutY="465.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+      <Label layoutX="187.0" layoutY="46.0" text="Habitaciones Disponibles:" textFill="#fffafa">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="189.0" layoutY="101.0" text="Habitaciones Reservadas:" textFill="#fcfafa">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHabitacionesDisponibles" layoutX="499.0" layoutY="46.0" text="18" textFill="#41c604">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHabitacionesReservadas" layoutX="506.0" layoutY="105.0" text="0" textFill="#f50e02">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vbContBotRes" layoutX="27.0" layoutY="177.0" prefHeight="279.0" prefWidth="314.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;" styleClass="reservas" stylesheets="@../application.css" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="311.0" style="-fx-background-color: #141414;" text="Precios" textFill="#f59f00">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="12.0" layoutY="32.0" prefHeight="27.0" prefWidth="311.0" style="-fx-background-color: #141414;" text="(1-6) Vistas a la ciudad.........15 Euros/dia" textFill="#f59f00">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="22.0" layoutY="64.0" prefHeight="27.0" prefWidth="311.0" style="-fx-background-color: #141414;" text="(7-12) Centrales.....................10 Euros/dia" textFill="#f59f00">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="12.0" layoutY="91.0" prefHeight="27.0" prefWidth="311.0" style="-fx-background-color: #141414;" text="(13-18) Vistas al mar............20 Euros/dia" textFill="#f59f00">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnReservasAniadir" alignment="CENTER" cache="true" disable="true" mnemonicParsing="false" onAction="#aniadirReserva" onMouseClicked="#aniadirReserva" prefHeight="43.0" prefWidth="259.0" style="-fx-background-color: #4dd608; -fx-background-radius: 20;" stylesheets="@../application.css" text="Añadir" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="40.06" radius="21.36" spread="0.46" width="47.38" />
+               </effect>
+               <VBox.margin>
+                  <Insets left="25.0" top="40.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </VBox>
+      <Pane fx:id="paneReservar" layoutX="29.0" layoutY="178.0" prefHeight="279.0" prefWidth="310.0" styleClass="reservas" stylesheets="@../application.css" visible="false">
+         <children>
+            <Label layoutX="39.0" layoutY="37.0" text="Introduzca D.N.I" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfDniReservas" layoutX="178.0" layoutY="36.0" prefHeight="26.0" prefWidth="94.0" promptText="00000000A" styleClass="date" stylesheets="@../application.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="dateEntrada" layoutX="63.0" layoutY="86.0" promptText="Fecha de entrada" styleClass="date" stylesheets="@../application.css" />
+            <DatePicker fx:id="dateSalida" layoutX="63.0" layoutY="128.0" promptText="Fecha de salida" styleClass="date" stylesheets="@../application.css" />
+            <RadioButton fx:id="btnRadioSinFecha" layoutX="65.0" layoutY="169.0" mnemonicParsing="false" text="Sin fecha de salida" textFill="#f8f7f7">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="btnConfirmarReserva" layoutX="19.0" layoutY="213.0" mnemonicParsing="false" onMouseClicked="#reservar" prefHeight="30.0" prefWidth="131.0" styleClass="azul" stylesheets="@../application.css" text="Reservar" />
+            <Button fx:id="btnCancelarReserva" layoutX="161.0" layoutY="213.0" mnemonicParsing="false" onAction="#resetearReservas" prefHeight="30.0" prefWidth="131.0" styleClass="rojo" stylesheets="@../application.css" text="Cancelar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

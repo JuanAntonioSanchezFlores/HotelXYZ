@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane fx:id="scrollParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.vista.FacturacionController">
+   <content>
+      <AnchorPane fx:id="apParent" maxHeight="900.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <AnchorPane fx:id="apVistaFactura" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: white;">
+               <children>
+                  <Label fx:id="lblDni" layoutX="481.0" layoutY="233.0" text="Nombre:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCiudad" layoutX="482.0" layoutY="254.0" text="Nombre:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblProvincia" layoutX="482.0" layoutY="275.0" text="Nombre:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblApellidos" layoutX="151.0" layoutY="254.0" text="Nombre:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDomicilio" layoutX="153.0" layoutY="275.0" text="Nombre:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="apTituloFactura" layoutX="9.0" layoutY="8.0" prefHeight="167.0" prefWidth="691.0">
+                     <children>
+                        <ImageView fitHeight="111.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../HotelXYZ-6.0/src/recursos/X.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="22.0" layoutY="117.0" text="Hotel XYZ">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="135.0" text="C/ Santa Fe, 5">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="153.0" text="Montilla (Córdoba)">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="371.0" layoutY="100.0" text="FACTURA N º:">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="371.0" layoutY="133.0" text="FECHA:">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="282.0" layoutY="7.0" text="FACTURA ">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNumFactura" layoutX="517.0" layoutY="100.0" text="num">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFechaFactura" layoutX="465.0" layoutY="133.0" prefHeight="23.0" prefWidth="94.0" text="00/00/0000">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="495.0" layoutX="33.0" layoutY="347.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
+                  <Line endX="554.0" layoutX="123.0" layoutY="188.0" startX="-100.0" />
+                  <Label layoutX="302.0" layoutY="316.0" text="CONCEPTO">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="363.0" text="Importe estancia en habitación número">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNumHabitacion" layoutX="343.0" layoutY="363.0" prefHeight="21.0" prefWidth="38.0" text="num">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="390.0" text="(Desde el dia ">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDiaEntrada" layoutX="145.0" layoutY="390.0" prefHeight="21.0" prefWidth="80.0" text="00/00/0000">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="225.0" layoutY="390.0" text="hasta el dia ">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDiaSalida" layoutX="322.0" layoutY="390.0" prefHeight="21.0" prefWidth="80.0" text="00/00/0000">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="399.0" layoutY="390.0" text=")">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="433.0" text="Importe servicios contratados">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="225.0" layoutY="465.0" text="Taxi">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="225.0" layoutY="503.0" text="Recogida de maletas">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="205.0" text="DATOS CLIENTE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="233.0" text="Nombre:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="254.0" text="Apellidos">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="60.0" layoutY="275.0" text="Domicilio">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="436.0" layoutX="138.0" layoutY="308.0" startX="12.0" />
+                  <Label layoutX="390.0" layoutY="233.0" text="D.N.I.">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="390.0" layoutY="275.0" text="Provincia:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="390.0" layoutY="254.0" text="Ciudad:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfe2e4" height="411.0" layoutX="434.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
+                  <Label layoutX="435.0" layoutY="353.0" text="Precio dia">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9fdff" height="411.0" layoutX="513.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
+                  <Label layoutX="523.0" layoutY="353.0" text="Servicio">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9fdff" height="411.0" layoutX="591.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" width="74.0" />
+                  <Label layoutX="601.0" layoutY="353.0" text="Importe">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPrecio" layoutX="462.0" layoutY="390.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTaxi" layoutX="541.0" layoutY="465.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMaleta" layoutX="541.0" layoutY="503.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblImporteHabitacion" layoutX="616.0" layoutY="390.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblImporteTaxi" layoutX="619.0" layoutY="465.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblImporteMaleta" layoutX="619.0" layoutY="503.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="470.0" layoutY="774.0" text="Base Imponible:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="470.0" layoutY="795.0" text="Importe I.V.A.">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="466.0" layoutY="816.0" text="Total Factura">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBase" layoutX="616.0" layoutY="774.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblIva" layoutX="616.0" layoutY="795.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotal" layoutX="616.0" layoutY="816.0" text="100">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNombre" layoutX="151.0" layoutY="233.0" text="Nombre:">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="apVistaFacturacion" maxHeight="900.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #141414;">
+                     <children>
+                        <ImageView fitHeight="241.0" fitWidth="250.0" layoutX="-60.0" layoutY="-48.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/X.png" />
+                           </image>
+                        </ImageView>
+                        <VBox fx:id="vbAniadirServicio" layoutX="34.0" layoutY="156.0" prefHeight="310.0" prefWidth="636.0" style="-fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: green; -fx-background-color: #141414;">
+                           <children>
+                              <Accordion />
+                              <HBox prefHeight="42.0" prefWidth="639.0">
+                                 <children>
+                                    <Label fx:id="lblCerrarFacturacion" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#cerrarVentana" prefHeight="45.0" prefWidth="46.0" styleClass="cerrar" stylesheets="@../application.css" text="X" textFill="#fffefe">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="590.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="12.0" layoutY="12.0" prefHeight="0.0" prefWidth="639.0" />
+                              <TableView fx:id="tblFacturas" prefHeight="162.0" prefWidth="532.0" style="-fx-border-width: 2; -fx-border-color: #00f55d;">
+                                 <columns>
+                                    <TableColumn fx:id="tbcHabitacion" prefWidth="82.0" text="HABITACION" />
+                                    <TableColumn fx:id="tbcNombre" prefWidth="75.0" text="NOMBRE" />
+                                    <TableColumn fx:id="tbcApellidos" prefWidth="120.0" text="APELLIDOS" />
+                                    <TableColumn fx:id="tbcDni" prefWidth="85.0" text="DNI" />
+                                    <TableColumn fx:id="tbcEntrada" prefWidth="87.0" text="ENTRADA" />
+                                    <TableColumn fx:id="tbcSalida" prefWidth="82.0" text="SALIDA" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets left="50.0" right="50.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </TableView>
+                              <HBox prefHeight="44.0" prefWidth="632.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="32.0" prefWidth="309.0" text="Filtrar por D.N.I:" textFill="#02e8bd">
+                                       <font>
+                                          <Font name="Book Antiqua Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="txfFiltroDni">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="14.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="btnCrearFactura" disable="true" mnemonicParsing="false" onAction="#insertarFactura" prefHeight="43.0" prefWidth="165.0" style="-fx-background-color: blue;" text="Crear Factura" textFill="WHITE">
+                                 <font>
+                                    <Font name="Book Antiqua Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="235.0" top="10.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <Label layoutX="255.0" layoutY="36.0" text="Facturación" textFill="#f8f7f6">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="152.0" layoutY="97.0" text="* Seleccione el registro que desea facturar" textFill="#e9f507">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="152.0" layoutY="123.0" text="(Se activará el botón para generar la factura)" textFill="#dcf507">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
